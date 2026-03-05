@@ -7,6 +7,8 @@ interface ArcReactorLoaderProps {
 }
 
 const FULL_TEXT = "INITIALIZING JARVIS...";
+// Dismiss timing: typing effect takes ~70ms × 22 chars ≈ 1540ms, system
+// message appears at 1400ms — 2600ms gives ~1s of "SYSTEM ONLINE" visibility.
 const DISMISS_DELAY = 2600;
 
 export default function ArcReactorLoader({ onComplete }: ArcReactorLoaderProps) {

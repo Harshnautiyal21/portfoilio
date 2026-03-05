@@ -3,6 +3,9 @@ import { useState, useEffect, useRef, useCallback, KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolioConfig } from "@/content/config";
 
+/** Max characters shown for project description in terminal output. */
+const MAX_DESCRIPTION_LENGTH = 100;
+
 type OutputLine = {
   id: number;
   type: "input" | "output" | "error" | "system";
@@ -47,7 +50,7 @@ function processCommand(cmd: string): OutputLine[] {
     case "projects":
       return portfolioConfig.projects.flatMap((p) => [
         makeLine("output", `\n▸ ${p.title}`),
-        makeLine("output", `  ${p.description.slice(0, 100)}...`),
+        makeLine("output", `  ${p.description.slice(0, MAX_DESCRIPTION_LENGTH)}...`),
         makeLine("output", `  Tags: ${p.tags.join(", ")}`),
         makeLine("output", `  GitHub: ${p.githubUrl}`),
       ]);

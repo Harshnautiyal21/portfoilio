@@ -3,6 +3,11 @@ import { useState, useRef, useEffect, useCallback, KeyboardEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolioConfig } from "@/content/config";
 
+/** Base delay before bot responds (ms). */
+const BASE_TYPING_DELAY = 900;
+/** Random additional variance added to typing delay (ms). */
+const TYPING_DELAY_VARIANCE = 400;
+
 interface Message {
   id: number;
   role: "user" | "bot";
@@ -129,7 +134,7 @@ export default function AIChatbot() {
         const botMsg: Message = { id: msgId++, role: "bot", text: botText };
         setMessages((prev) => [...prev, botMsg]);
         setIsTyping(false);
-      }, 900 + Math.random() * 400);
+      }, BASE_TYPING_DELAY + Math.random() * TYPING_DELAY_VARIANCE);
     },
     [isTyping]
   );

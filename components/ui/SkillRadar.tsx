@@ -12,6 +12,7 @@ const SIZE = 380;
 const CENTER = SIZE / 2;
 const OUTER_RADIUS = 140;
 const LEVELS = 5;
+const ANIMATION_DURATION_MS = 1400;
 
 // Pull radar data from config; fall back to built-in defaults
 const configWithRadar = portfolioConfig as typeof portfolioConfig & {
@@ -65,7 +66,7 @@ export default function SkillRadar() {
 
   useEffect(() => {
     if (!isInView) return;
-    const duration = 1400;
+    const duration = ANIMATION_DURATION_MS;
     let start: number | null = null;
     let rafId: number;
 

@@ -12,6 +12,7 @@ interface ProjectCard3DProps {
   index: number;
 }
 
+/** Maximum tilt angle in degrees applied to each axis on mouse move. */
 const MAX_TILT = 14;
 
 export default function ProjectCard3D(props: ProjectCard3DProps) {
