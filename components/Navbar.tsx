@@ -23,7 +23,7 @@ export default function Navbar() {
 
       // Track active section
       const sections = ["skills", "projects", "journey", "contact"];
-      for (const section of sections.reverse()) {
+      for (const section of [...sections].reverse()) {
         const el = document.getElementById(section);
         if (el && window.scrollY >= el.offsetTop - 200) {
           setActiveSection(section);

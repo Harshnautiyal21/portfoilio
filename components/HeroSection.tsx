@@ -116,7 +116,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-accent-cyan font-heading text-xs tracking-[0.5em] uppercase mb-6 opacity-80"
           >
-            // initializing portfolio...
+            {"// initializing portfolio..."}
           </motion.p>
         )}
 

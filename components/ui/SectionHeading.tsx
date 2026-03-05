@@ -35,7 +35,7 @@ export default function SectionHeading({
     >
       {/* HUD prefix */}
       <p className="text-accent-cyan font-heading text-xs tracking-[0.4em] uppercase mb-3 opacity-70">
-        // system.module
+        {"// system.module"}
       </p>
 
       <h2
