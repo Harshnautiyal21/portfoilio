@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import ProjectCard from "./ui/ProjectCard";
+import ProjectCard3D from "./ui/ProjectCard3D";
 import { portfolioConfig } from "@/content/config";
 
 export default function ProjectsSection() {
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
         {/* Projects grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {portfolioConfig.projects.map((project, i) => (
-            <ProjectCard
+            <ProjectCard3D
               key={project.id}
               title={project.title}
               description={project.description}

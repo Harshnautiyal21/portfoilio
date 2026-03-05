@@ -91,6 +91,17 @@ export const portfolioConfig = {
     },
   ],
 
+  skillRadar: [
+    { name: "Python", proficiency: 95 },
+    { name: "PyTorch", proficiency: 85 },
+    { name: "LangChain", proficiency: 88 },
+    { name: "Spark", proficiency: 82 },
+    { name: "Docker", proficiency: 90 },
+    { name: "FastAPI", proficiency: 88 },
+    { name: "Next.js", proficiency: 78 },
+    { name: "PostgreSQL", proficiency: 80 },
+  ],
+
   timeline: [
     {
       year: "2021",
