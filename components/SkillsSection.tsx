@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import SkillCard from "./ui/SkillCard";
+import SkillRadar from "./ui/SkillRadar";
 import { portfolioConfig } from "@/content/config";
 
 export default function SkillsSection() {
@@ -57,6 +58,17 @@ export default function SkillsSection() {
           </motion.div>
         ))}
       </div>
+
+      {/* Skill proficiency radar */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="mt-16 flex justify-center"
+      >
+        <SkillRadar />
+      </motion.div>
     </section>
   );
 }
